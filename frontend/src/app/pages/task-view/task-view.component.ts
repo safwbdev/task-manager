@@ -8,12 +8,13 @@ import { TaskService } from 'src/app/task.service';
 })
 export class TaskViewComponent implements OnInit {
 
-  constructor(private TaskService: TaskService) { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
   }
-  createNewList(title: string) {
-    this.TaskService.createList('Testing').subscribe((response: any) =>{
+
+  createNewList() {
+    this.taskService.createList('Testing').subscribe((response: any) =>{
       console.log(response);
     })
   }
