@@ -16,19 +16,10 @@
                 <h1 class="title has-text-primary ">
                     Lists
                 </h1>
-                <div class="task">
-                    <p>thing i gotta do</p>
-                </div>
-                <div class="task">
-                    <p>thing i gotta do</p>
-                </div>
-                <div class="task complete">
-                    <p>thing i gotta do</p>
-                </div>
                 <div class="task" *ngFor="let task of tasks">
                     <p>{{task.title}}</p>
                 </div>
-                <button class="circle-add-button button is-primary">
+                <button class="circle-add-button button is-primary" routerLink="./new-task">
                     <img src="../../../assets/plus-icon.svg" alt="">
                 </button>
         </div>
