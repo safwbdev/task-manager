@@ -28,6 +28,7 @@
 
 }
 .task-list-container{
+    position: relative;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -82,4 +83,13 @@
         text-decoration: line-through;
         opacity: 0.8;
     }
+}
+.circle-add-button{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-radius: 50%;
+
 }
