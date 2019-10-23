@@ -35,12 +35,6 @@
     padding: 42px;;
     border-radius: 0 8px 8px 0;
 }
-.title{
-    font-family: 'Lato';
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 .list-menu{
     display: flex;
     flex-direction: column;
@@ -92,4 +86,9 @@
     right: 35px;
     border-radius: 50%;
 
+}
+.empty-state-text{
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
 }

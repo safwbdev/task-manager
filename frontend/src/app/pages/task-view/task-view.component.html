@@ -10,18 +10,25 @@
                 </a>
             </div>
             <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
-
         </div>
         <div class="task-list-container has-background-light">
+            <div *ngIf="tasks">
                 <h1 class="title has-text-primary ">
                     Lists
                 </h1>
                 <div class="task" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{'completed': task.completed }">
                     <p>{{task.title}}</p>
                 </div>
+
+                <h3 class="empty-state-text" *ngIf="tasks.length === 0">There are no tasks here. Click the add button beloow to create a task.</h3>
+
                 <button class="circle-add-button button is-primary" routerLink="./new-task">
                     <img src="../../../assets/plus-icon.svg" alt="">
                 </button>
+            </div>
+            <div *ngIf="!tasks">
+                <h3 class="empty-state-text">Please select a list from the side bar</h3>
+            </div>
         </div>
     </div>
 </div>
